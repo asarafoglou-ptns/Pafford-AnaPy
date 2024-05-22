@@ -1,0 +1,11 @@
+Package: AnaPy
+Title: Generate Letter String Analogy Problems
+Version: 0.0.0.9000
+Authors@R: 
+    person("Alexandra", "Pafford", , "alexandrapafford@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This app is designed to generate letter string analogies. You can choose the type of transformation and the number of analogies analogies. This app and the corresponding R package are particularly useful for those researching intelligence, reasoning, or creativity from cognitive psychology or computer science perspective.
+License: CC BY 4.0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
