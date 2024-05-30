@@ -1,5 +1,5 @@
 
-## Analogies App
+## Analogies App Functions
 ## Alexandra Pafford
 
 # --------------------------------------------------------------------------
@@ -23,7 +23,7 @@ library(writexl)
 #' generate_sequential_string(5)
 #' @export
 generate_sequential_string <- function(length) {
-  start_letter <- sample(LETTERS[1:(26 - length + 1)], 1)
+  start_letter <- sample(letters[1:(26 - length + 1)], 1)
   start_index <- utf8ToInt(start_letter)
   sequential_string <- intToUtf8(start_index:(start_index + length - 1))
   paste(sequential_string, collapse = "")
@@ -92,9 +92,7 @@ generate_analogy <- function(base_string, transformation) {
   B <- transformation(A)
   C <- shift_letters(A, 1)
   D <- transformation(C)
-  sprintf("%s : %s :: %s : %s", A, B, C, D)
+  list(A = A, B = B, C = C, D = D)  # Return as a list
 }
 
 # --------------------------------------------------------------------------
-
-
