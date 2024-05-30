@@ -22,9 +22,17 @@ devtools::install_github("asarafoglou-ptns/Pafford-Analogy/Analogies")
 ## Usage
 To run the Shiny app included in the package, use the following command in your R console:
 ```r
-library(analogies)
+devtools::install_github("asarafoglou-ptns/Pafford-Analogy/Analogies")
+
+library(Analogies)
+
+source("[your_path_here]/Analogy_UI.R")
+source("[your_path_here]/Analogy_Server.R")
+
+# Run the application
 shiny::shinyApp(ui = ui, server = server)
 ```
+You can also find this code laid out for you to use in the /R/Analogies_App.R file. 
 
 ## Functions
 
