@@ -1,8 +1,6 @@
 
 ## Analogies App
 ## Alexandra Pafford
-setwd("C:/Users/alexa/Documents/Programming2/Analogies/R")
-getwd()
 
 # --------------------------------------------------------------------------
 
@@ -105,19 +103,19 @@ ui <- shiny::fluidPage(
   # Add custom CSS to style the app
   shiny::tags$head(
     shiny::tags$style(shiny::HTML("
-      body { 
-        background-color: #FFD1DC; 
-        color: #333333; 
-        font-family: 'Arial', sans-serif; 
+      body {
+        background-color: #FFD1DC;
+        color: #333333;
+        font-family: 'Arial', sans-serif;
       }
-      .well { 
-        background-color: #FFC0CB; 
+      .well {
+        background-color: #FFC0CB;
         border-color: #FFB6C1;
       }
-      h1 { 
-        color: #CC8899; 
+      h1 {
+        color: #CC8899;
       }
-      .btn { 
+      .btn {
         background-color: #FFB6C1;
         color: #FFFFFF;
         border: none;
@@ -136,9 +134,9 @@ ui <- shiny::fluidPage(
       }
     "))
   ),
-  
+
   shiny::titlePanel("Letter String Analogy Generator"),
-  
+
   shiny::sidebarLayout(
     shiny::sidebarPanel(
       shiny::numericInput("num_problems", "Number of problems:", 5, min = 1),
@@ -158,24 +156,24 @@ server <- function(input, output) {
   generate_analogies <- reactive({
     num_problems <- input$num_problems
     transformation_type <- input$transformation_type
-    
+
     base_strings <- replicate(num_problems, generate_sequential_string(4))
-    
+
     transformation <- switch(transformation_type,
                              "Shift Letters" = function(s) shift_letters(s, 1),
                              "Reverse String" = reverse_string,
                              "Shift Two Letters" = function(s) shift_letters(s, 2),
                              "Letter Deletion" = letter_deletion,
                              "Letter Addition" = letter_addition)
-    
+
     analogies <- sapply(base_strings, generate_analogy, transformation = transformation)
     data.frame(Analogy = analogies)
   })
-  
+
   output$analogy_table <- shiny::renderTable({
     generate_analogies()
   })
-  
+
   output$downloadData <- shiny::downloadHandler(
     filename = function() {
       paste("analogies-", Sys.Date(), ".csv", sep = "")
