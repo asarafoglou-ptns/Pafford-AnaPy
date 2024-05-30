@@ -1,0 +1,62 @@
+---
+title: "Analogies README"
+author: "Alexandra Pafford"
+date: "2024-05-29"
+output: github_document
+---
+
+# Analogies Package
+
+This app is designed to generate letter string analogy problems. You have the option to specify the type of transformation and the number of analogies to generate. You can export your list of analogy problems to a .csv file. Furthermore, you can use the Cognitive Task page to administer letter string problems to participants in an experimental setting. This app and the corresponding R package are particularly useful for those researching intelligence, reasoning, or creativity from cognitive psychology or computer science perspective.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Features
+
+- Feature 1
+- Feature 2
+- Feature 3
+
+## Installation
+
+### Prerequisites
+
+- R (version x.y.z or higher)
+- RStudio (version x.y.z or higher)
+- Required packages: `dplyr`, `ggplot2`, etc.
+
+### Steps
+
+1. Clone the repository:
+
+    ```sh
+    git clone https://github.com/your-username/your-repo.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```sh
+    cd your-repo
+    ```
+
+3. Install the required R packages:
+
+    ```r
+    install.packages(c("dplyr", "ggplot2"))
+    ```
+
+## Usage
+
+### Running the Project
+
+To start using the project, load the main script:
+
+```r
+source("main_script.R")
