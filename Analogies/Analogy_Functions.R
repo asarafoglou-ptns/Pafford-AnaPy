@@ -1,9 +1,6 @@
 ## Analogies App
 ## Alexandra Pafford
 
-setwd("C:/Users/alexa/Documents/Programming2/Analogies/R")
-getwd()
-
 # --------------------------------------------------------------------------
 
 ## Install dependencies
@@ -161,8 +158,8 @@ ui <- shiny::fluidPage(
                     shiny::tags$p("Thus, letter string analogies offer a robust way to study reasoning. Popular in psychology, they have not gone unnoticed by researchers in AI. Recent efforts in understanding abstraction and reasoning in intelligent systems have given new life to the once-niche field of analogy."),
                     shiny::tags$p("I hope that anyone interested in creativity, intelligence, reasoning, language, and cognition in general will find this app useful."),
                     shiny::tags$h3("About This App"),
-                    shiny::tags$p("This application generates letter string analogies based on user-selected transformations. It is designed to aid users in experimental stimuli creation."),
-                    shiny::tags$p("Select the type of transformation and the number of problems you want to generate (up to 20 at a time), and then click the download button to save your analogies locally."),
+                    shiny::tags$p("This application generates letter string analogies based on user-selected transformations. It is designed to aid users in experimental stimuli creation. Select the type of transformation and the number of problems you want to generate (up to 20 at a time), and then click the download button to save your analogies locally."),
+                    shiny::tags$p("You can also use the Cognitive Task page to administer letter string analogies to participants in an experimental setting, or to play with the problems yourself. The app will tell you whether the response was correct, and move on to the next question after each problem is solved successfully."),
                     shiny::tags$p("Developed by: Alexandra N. Pafford")
     )
   )
