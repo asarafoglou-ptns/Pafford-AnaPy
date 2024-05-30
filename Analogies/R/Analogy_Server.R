@@ -92,3 +92,5 @@ server <- function(input, output, session) {
     updateTextInput(session, "user_answer", value = "")
   })
 }
+
+# --------------------------------------------------------------------------

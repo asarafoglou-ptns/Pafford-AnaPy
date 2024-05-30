@@ -33,3 +33,4 @@ source("[your_path_here]/Analogy_Server.R")
 # Run the application
 shiny::shinyApp(ui = ui, server = server)
 
+# --------------------------------------------------------------------------
