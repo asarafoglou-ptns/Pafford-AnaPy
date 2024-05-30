@@ -1,9 +1,6 @@
 ## Analogies App
 ## Alexandra Pafford
 
-setwd("C:/Users/alexa/Documents/Programming2/Analogies/R")
-getwd()
-
 # --------------------------------------------------------------------------
 
 ## Install dependencies

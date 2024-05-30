@@ -16,7 +16,7 @@ You can install the latest version of the package directly from GitHub:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("anpafford/asarafoglou-ptns/Pafford-Analogy")
+devtools::install_github("asarafoglou-ptns/Pafford-Analogy/Analogies")
 ```
 
 ## Usage
